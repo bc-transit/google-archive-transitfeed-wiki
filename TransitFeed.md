@@ -2,6 +2,19 @@
 
 `transitfeed.py` is a Python module for reading, validating, and writing transit schedule information in the [GTFS](https://developers.google.com/transit/gtfs) format.  Python programmers are encouraged to make use of this functionality when building programs that work with transit data.
 
+# Install
+
+Some features of the distribution depend on [pytz](http://pytz.sourceforge.net/). You may need to install it manually.
+
+The easiest way to install `transitfeed` is using `easy_install` from the Python [setuptools](https://pypi.python.org/pypi/setuptools) package:
+
+```
+easy_install transitfeed
+```
+will download and install `transitfeed` and the scripts that come with it.
+
+If you don't have easy_install on your computer you may download `transitfeed-<version>.tar.gz` from [http://code.google.com/p/googletransitdatafeed/downloads/list the downloads section]. Expand with `tar -xfz transitfeed-<version>.tar.gz`. You may run the tools directly from the expanded directory or run `python setup.py install`.
+
 # Sample Usage
 
 A small sample program for creating an (incomplete) feed is shown below. The [examples directory](https://github.com/google/transitfeed/tree/master/examples) contains more sample scripts.
