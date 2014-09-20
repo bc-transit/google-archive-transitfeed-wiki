@@ -1,10 +1,10 @@
 The TransitFeedDistribution contains several parts, each with its own instructions
 
 * [TransitFeed](wiki/TransitFeed) - a Python package for reading, writing, and validating feeds
-* FeedValidator - a command line tool that checks a Google Transit Feed for problems
-* ScheduleViewer - an application for exploring a feed on a map   
-* [KMLWriter] - an application for plotting a feed's stops in a KML file for viewing in Google Earth
-* [Merge] - combines two GTFS files into one
+* [FeedValidator](wiki/FeedValidator) - a command line tool that checks a Google Transit Feed for problems
+* [ScheduleViewer](wiki/ScheduleViewer) - an application for exploring a feed on a map   
+* [[KMLWriter]] - an application for plotting a feed's stops in a KML file for viewing in Google Earth
+* [[Merge]] - combines two GTFS files into one
 * [GoogleRandomQueries] - an example program. generates random queries for Google Maps trip planner.
 * [UnusualTripFilter] - sets the trip_type depending on how often a pattern is used
 
