@@ -1,14 +1,14 @@
 # Prerequisites
 
-You need a Microsoft Windows machine for testing and [BuildingPythonWindowsExecutables]; that subpage also contains help how to install Python, utilities, and a Subversion client under Windows.
+You need a Microsoft Windows machine for testing and [[BuildingPythonWindowsExecutables]]; that subpage also contains help how to install Python, utilities, and a Subversion client under Windows.
 
-Some familiarity with subversion tags and branches may be useful. [Version Control with Subversion](http://svnbook.red-bean.com/en/1.5/svn.branchmerge.html) is quite good.
+Some familiarity with git tags and branches may be useful. [Git Basiscs - Tagging](http://git-scm.com/book/en/Git-Basics-Tagging) is quite good.
 
 For the final step, you need access to update the [PyPI transitfeed](http://pypi.python.org/pypi/transitfeed) package.  That means, you need an account at that site, and an owner of the package needs to grant write access to you or do the update for you.
 
 # Steps
 
-## Check that trunk is ready
+## Check that master is ready
 
 Make sure `transitfeed.__version__` is set to the new version in trunk and all tests pass.
 
@@ -38,10 +38,9 @@ Using the exported tree build the source tar ball in unix with `python setup.py 
 
 ## Finalize the release
 
-Freeze the release branch with a Subversion tag:
-`svn cp -m "make version x.y.z tag" https://googletransitdatafeed.googlecode.com/svn/branches/transitfeed-1.2.3 https://googletransitdatafeed.googlecode.com/svn/tags/transitfeed-1.2.3`
+Tag the release version:
 
-Note: once you have created the release's Subversion tag, older versions of feedvalidator will tell users to upgrade.
+`git tag -a transitfeed-x.y.z -m "transitfeed-x.y.z" [optional commit identifier]`
 
 Move the label Featured from the previous to this release.
 
@@ -49,4 +48,4 @@ Update PyPI with {{{python setup.py register sdist}}}.
 
 ## Announce it
 
-Send an email to googletransitdatafeed@googlegroups.com. If you have access also put something on https://groups.google.com/group/google-transit-help-announcements .
+Send an email to googletransitdatafeed@googlegroups.com.
