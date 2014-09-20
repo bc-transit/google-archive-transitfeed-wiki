@@ -1,39 +1,33 @@
-# Introduction
+The TransitFeedDistribution contains several parts, each with its own instructions
 
-`transitfeed.py` is a Python module for reading, validating, and writing transit schedule information in the [GTFS](https://developers.google.com/transit/gtfs) format.  Python programmers are encouraged to make use of this functionality when building programs that work with transit data.
+* TransitFeed - a Python package for reading, writing, and validating feeds
+* FeedValidator - a command line tool that checks a Google Transit Feed for problems
+* ScheduleViewer - an application for exploring a feed on a map   
+* [KMLWriter] - an application for plotting a feed's stops in a KML file for viewing in Google Earth
+* [Merge] - combines two GTFS files into one
+* [GoogleRandomQueries] - an example program. generates random queries for Google Maps trip planner.
+* [UnusualTripFilter] - sets the trip_type depending on how often a pattern is used
 
-# Sample Usage
+# Download
 
-A small sample program for creating an (incomplete) feed is shown below. The [examples directory](https://github.com/google/transitfeed/tree/master/examples) contains more sample scripts.
+You may download the transitfeed distribution as Windows executables, a source tar ball or directly from our Subversion repository.
 
-```
-import transitfeed
+## Windows Executable
 
+If you just want to run the tools you may download prebuilt Windows programs from [http://code.google.com/p/googletransitdatafeed/downloads/list the downloads section]. Download the latest version of `transitfeed-<version>-windows.zip` and unzip the contents into an empty directory.  Then see the ScheduleViewer and FeedValidator pages for further instructions.
 
-schedule = transitfeed.Schedule()
-schedule.AddAgency("Fly Agency", "http://iflyagency.com",
-                   "America/Los_Angeles")
+## Install source distribution
 
-service_period = schedule.GetDefaultServicePeriod()
-service_period.SetStartDate("20070101")
-service_period.SetEndDate("20080101")
-service_period.SetWeekdayService(True)
-service_period.SetDateHasService('20070704', False)
+Some features of the distribution depend on !ElementTree (added to Python's standard library in version 2.5) and pytz. You may need to install these manually.
 
-stop1 = schedule.AddStop(lng=-122, lat=37.2, name="Suburbia")
-stop2 = schedule.AddStop(lng=-122.001, lat=37.201, name="Civic Center")
+`easy_install transitfeed` will download and install transitfeed and the scripts that come with it.
 
-route = schedule.AddRoute(short_name="22", long_name="Civic Center Express",
-                          route_type="Bus")
+If you don't have easy_install on your computer you may download `transitfeed-<version>.tar.gz` from [http://code.google.com/p/googletransitdatafeed/downloads/list the downloads section]. Expand with `tar -xzf transitfeed-<version>.tar.gz`. You may run the tools directly from the expanded directory or run `python2.4 setup.py install`.
 
-trip = route.AddTrip(schedule, headsign="To Downtown")
-trip.AddStopTime(stop1, stop_time='09:00:00')
-trip.AddStopTime(stop2, stop_time='09:15:00')
+## Subversion repository
 
-trip = route.AddTrip(schedule, headsign="To Suburbia")
-trip.AddStopTime(stop1, stop_time='17:30:00')
-trip.AddStopTime(stop2, stop_time='17:45:00')
+If you want to make changes grab our source from http://googletransitdatafeed.googlecode.com/svn/trunk/python.
 
-schedule.Validate()
-schedule.WriteGoogleTransitFeed('google_transit.zip')
-```
+# Bugs and feature requests
+
+Please create a new issue if you find bugs or have a feature requests. Patches released under the terms of the Apache 2.0 license are more than welcome! You may contact the developers in the [http://groups.google.com/group/googletransitdatafeed Google Transit Data Feed Google Group]. 
