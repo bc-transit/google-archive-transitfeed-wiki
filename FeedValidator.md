@@ -16,7 +16,7 @@ Once you have it downloaded and unzipped, there are a few ways to run it:
 
 Drag a GTFS zip file or directory onto `feedvalidator.exe`.  A window will pop up with the result of the validation test:
 
-http://googletransitdatafeed.googlecode.com/svn/wiki/images/validation-complete.png
+[[validation-complete.png]]
 
 ## Intermediate
 
