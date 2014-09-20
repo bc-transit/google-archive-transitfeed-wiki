@@ -1,24 +1,24 @@
-The TransitFeedDistribution contains several parts, each with its own instructions
+The TransitFeed library contains several parts, each with its own instructions:
 
-* [TransitFeed](wiki/TransitFeed) - a Python package for reading, writing, and validating feeds
-* [FeedValidator](wiki/FeedValidator) - a command line tool that checks a Google Transit Feed for problems
-* [ScheduleViewer](wiki/ScheduleViewer) - an application for exploring a feed on a map   
+* [[TransitFeed]] - a Python package for reading, writing, and validating feeds
+* [[FeedValidator]] - a command line tool that checks a GTFS feed for problems
+* [[ScheduleViewer]] - an application for exploring a feed on a map   
 * [[KMLWriter]] - an application for plotting a feed's stops in a KML file for viewing in Google Earth
 * [[Merge]] - combines two GTFS files into one
-* [GoogleRandomQueries] - an example program. generates random queries for Google Maps trip planner.
-* [UnusualTripFilter] - sets the trip_type depending on how often a pattern is used
+* [[GoogleRandomQueries]] - an example program. generates random queries for Google Maps trip planner.
+* [[UnusualTripFilter]] - sets the trip_type depending on how often a pattern is used
 
 # Download
 
-You may download the transitfeed distribution as Windows executables, a source tar ball or directly from our Subversion repository.
+You may download the transitfeed distribution as Windows executables, a source tar ball, or directly from our GitHub repository.
 
 ## Windows Executable
 
-If you just want to run the tools you may download prebuilt Windows programs from [http://code.google.com/p/googletransitdatafeed/downloads/list the downloads section]. Download the latest version of `transitfeed-<version>-windows.zip` and unzip the contents into an empty directory.  Then see the ScheduleViewer and FeedValidator pages for further instructions.
+If you just want to run the tools you may download prebuilt Windows programs from [http://code.google.com/p/googletransitdatafeed/downloads/list the downloads section]. Download the latest version of `transitfeed-<version>-windows.zip` and unzip the contents into an empty directory.  Then see the [[ScheduleViewer]] and [[FeedValidator]] pages for further instructions.
 
 ## Install source distribution
 
-Some features of the distribution depend on !ElementTree (added to Python's standard library in version 2.5) and pytz. You may need to install these manually.
+Some features of the distribution depend on pytz. You may need to install it manually.
 
 `easy_install transitfeed` will download and install transitfeed and the scripts that come with it.
 
