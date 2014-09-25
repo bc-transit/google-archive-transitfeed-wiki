@@ -23,6 +23,17 @@ For Nov 2009 here is how I install these on a Windows XP machine. Some of them e
 * `c:\Python25\Scripts\easy_install.exe nose` gave me nose-0.11.1
 * Install TortoiseSVN-1.6.6.17493-win32-svn-1.6.6 from http://tortoisesvn.tigris.org/ , which needed a reboot after installation.
 
+# Initial Setup
+
+* Install `python-2.7` from http://python.org/
+* Install `py2exe` for `win32-py2.7` from http://www.py2exe.org/
+* Install `setuptools` from http://pypi.python.org/pypi/setuptools/
+  * You'll need to make sure the setuptools.egg has been unzipped as well, otherwise the py2exe tool won't be able to find the `pkg_resources` module and you'll get strange warnings about uncommon timzone names in the validator because the `pkg_resource` module is not available to `pytz` to find timezone files.
+* `c:\Python27\Scripts\easy_install.exe --always-unzip pytz`
+* `c:\Python27\Scripts\easy_install.exe --always-unzip simplejson`
+* `c:\Python27\Scripts\easy_install.exe nose`
+* Install `git` from http://git-scm.com/download/win
+
 # Steps
 
 Make a new directory and do `svn export http://googletransitdatafeed.googlecode.com/svn/branches/transitfeed-<version>/`.  To do that with TortoiseSVN, you go into the directory with Explorer, right-click, and select TortoiseSVN >> Export.
