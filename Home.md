@@ -14,20 +14,24 @@ You may download the transitfeed distribution as Windows executables, a source t
 
 ## Windows Executable
 
-If you just want to run the tools you may download prebuilt Windows programs from [http://code.google.com/p/googletransitdatafeed/downloads/list the downloads section]. Download the latest version of `transitfeed-<version>-windows.zip` and unzip the contents into an empty directory.  Then see the [[ScheduleViewer]] and [[FeedValidator]] pages for further instructions.
+If you just want to run the tools, you may download prebuilt Windows programs from:
+
+https://github.com/google/transitfeed/releases/latest
+
+Download the latest version of `transitfeed-<version>-windows.zip` and unzip the contents into an empty directory.  Then see the [[FeedValidator]] and [[ScheduleViewer]] pages for further instructions.
 
 ## Install source distribution
 
+To install the `transitfeed` Python library:
+
+```
+easy_install transitfeed
+```
+
 Some features of the distribution depend on pytz. You may need to install it manually.
 
-`easy_install transitfeed` will download and install transitfeed and the scripts that come with it.
-
-If you don't have easy_install on your computer you may download `transitfeed-<version>.tar.gz` from [http://code.google.com/p/googletransitdatafeed/downloads/list the downloads section]. Expand with `tar -xzf transitfeed-<version>.tar.gz`. You may run the tools directly from the expanded directory or run `python2.4 setup.py install`.
-
-## Subversion repository
-
-If you want to make changes grab our source from http://googletransitdatafeed.googlecode.com/svn/trunk/python.
+If you don't have `easy_install` on your computer you may download [the latest source distribution](https://github.com/google/transitfeed/releases/latest) directly.
 
 # Bugs and feature requests
 
-Please create a new issue if you find bugs or have a feature requests. Patches released under the terms of the Apache 2.0 license are more than welcome! You may contact the developers in the [http://groups.google.com/group/googletransitdatafeed Google Transit Data Feed Google Group]. 
+Please create a new issue if you find bugs or have a feature requests. Patches released under the terms of the Apache 2.0 license are more than welcome!
