@@ -10,7 +10,7 @@ For the final step, you need access to update the [PyPI transitfeed](http://pypi
 
 ## Check that master is ready
 
-Make sure `transitfeed.__version__` is set to the new version in trunk and all tests pass.
+Make sure `transitfeed.version.__version__` is set to the new version in HEAD and all tests pass.
 
 ## Make a branch
 
