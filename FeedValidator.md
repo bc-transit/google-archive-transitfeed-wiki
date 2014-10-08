@@ -61,7 +61,7 @@ If <input GTFS.zip> is ommited the filename is read from the console. Dragging
 a file into the console may enter the filename.
 
 For more information see
-http://code.google.com/p/googletransitdatafeed/wiki/FeedValidator
+https://github.com/google/transitfeed/wiki/FeedValidator
 
 
 Options:
