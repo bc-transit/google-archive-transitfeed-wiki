@@ -1,10 +1,8 @@
 # Prerequisites
 
-You need a Microsoft Windows machine for testing and [[BuildingPythonWindowsExecutables]]; that subpage also contains help how to install Python, utilities, and a Subversion client under Windows.
-
-Some familiarity with git tags and branches may be useful. [Git Basiscs - Tagging](http://git-scm.com/book/en/Git-Basics-Tagging) is quite good.
-
-For the final step, you need access to update the [PyPI transitfeed](http://pypi.python.org/pypi/transitfeed) package.  That means, you need an account at that site, and an owner of the package needs to grant write access to you or do the update for you.
+* Some familiarity with git tags and branches may be useful. [Git Basiscs - Tagging](http://git-scm.com/book/en/Git-Basics-Tagging) is quite good.
+* A Microsoft Windows machine for testing and [[BuildingPythonWindowsExecutables]]; that subpage also contains help how to install Python, utilities, and a Subversion client under Windows.
+* Access to update the [PyPI transitfeed](http://pypi.python.org/pypi/transitfeed) package.  That means, you need an account at that site, and an owner of the package needs to grant write access to you or do the update for you.
 
 # Steps
 
