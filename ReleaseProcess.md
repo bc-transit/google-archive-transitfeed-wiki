@@ -6,16 +6,9 @@
 
 # Steps
 
-## Check that master is ready
-
-Make sure `transitfeed.version.__version__` is set to the new version in HEAD and all tests pass.
-
-## Make a branch
-
-`svn cp -m "make version 1.2.3 branch" https://googletransitdatafeed.googlecode.com/svn/trunk https://googletransitdatafeed.googlecode.com/svn/branches/transitfeed-1.2.3`
-
-## Run tests
-
+* Ensure that all tests pass.
+* Bump the version number in `transitfeed/version.py`
+* Tag the version
 Get a clean copy with `svn export https://googletransitdatafeed.googlecode.com/svn/branches/transitfeed-1.2.3` and run the tests in Linux and Windows with the nosetests command. 
 
 Manually start the schedule viewer (using test/data/good_feed.zip, for example), click on a stop (an info window of next departures should open), click on a trip and its shape should be displayed with stop times. Try it in a variety of browsers, at least IE and Firefox.
