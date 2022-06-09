@@ -1,3 +1,5 @@
+> ⚠️ **NOTE:**  This project is no longer actively maintained.  For up-to-date GTFS validation tools, see the https://github.com/MobilityData/gtfs-validator project. ⚠️
+
 The `feedvalidator` is a command line tool that checks a GTFS feed for problems and generates a HTML report.  Running it on your transit data feed and fixing the issues that it finds can save you from display and routing problems down the road.
 
 For a list of the errors and warnings that FeedValidator outputs, see the [[FeedValidatorErrorsAndWarnings]] page.
